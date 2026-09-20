@@ -1,0 +1,166 @@
+.settings-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+  padding: 24px;
+  transition: 0.3s;
+}
+
+.settings-page.dark {
+  background: #111827;
+  color: #ffffff;
+}
+
+.settings-header {
+  max-width: 900px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.settings-back-btn {
+  border: none;
+  background: #ffffff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.settings-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.settings-header p {
+  margin: 6px 0 0;
+  color: #667085;
+}
+
+.settings-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+
+.settings-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.settings-card h2 {
+  margin: 0 0 20px;
+  font-size: 21px;
+}
+
+.setting-row,
+.account-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid #eaecf0;
+}
+
+.setting-row:last-child,
+.account-row:last-child {
+  border-bottom: none;
+}
+
+.setting-row strong,
+.account-row strong {
+  color: #344054;
+}
+
+.setting-row p {
+  margin: 5px 0 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+.setting-row select {
+  padding: 9px 12px;
+  border: 1px solid #d0d5dd;
+  border-radius: 9px;
+  background: white;
+  cursor: pointer;
+}
+
+.toggle {
+  width: 48px;
+  height: 26px;
+  border: none;
+  border-radius: 20px;
+  background: #d0d5dd;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.toggle span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.toggle.active {
+  background: #111827;
+}
+
+.toggle.active span {
+  transform: translateX(22px);
+}
+
+.account-row span {
+  color: #667085;
+}
+
+.settings-page.dark .settings-card {
+  background: #1f2937;
+}
+
+.settings-page.dark .setting-row,
+.settings-page.dark .account-row {
+  border-color: #374151;
+}
+
+.settings-page.dark .setting-row strong,
+.settings-page.dark .account-row strong {
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .settings-page {
+    padding: 16px;
+  }
+
+  .settings-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .settings-header h1 {
+    font-size: 23px;
+  }
+
+  .settings-card {
+    padding: 20px;
+  }
+
+  .setting-row,
+  .account-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .setting-row select,
+  .toggle {
+    align-self: flex-start;
+  }
+}

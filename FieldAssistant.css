@@ -1,0 +1,213 @@
+.field-assistant-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+  padding: 24px;
+}
+
+.field-assistant-header {
+  max-width: 1000px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.field-back-btn {
+  border: none;
+  background: #ffffff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.field-assistant-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.field-assistant-header p {
+  margin: 6px 0 0;
+  color: #667085;
+}
+
+.field-assistant-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.field-asset {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.field-asset span {
+  font-size: 12px;
+  color: #667085;
+  font-weight: 600;
+}
+
+.field-asset strong {
+  font-size: 17px;
+}
+
+.field-assistant-card label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.field-assistant-card textarea {
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 160px;
+  padding: 15px;
+  border: 1px solid #d0d5dd;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+}
+
+.field-assistant-card textarea:focus {
+  border-color: #667085;
+}
+
+.analyze-btn {
+  margin-top: 16px;
+  border: none;
+  padding: 13px 20px;
+  border-radius: 10px;
+  background: #111827;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.analyze-btn:hover {
+  opacity: 0.9;
+}
+
+.assistant-result {
+  margin-top: 28px;
+  padding: 22px;
+  background: #f8fafc;
+  border-radius: 14px;
+}
+
+.assistant-result h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 13px 0;
+  border-bottom: 1px solid #e4e7ec;
+}
+
+.result-item span {
+  color: #667085;
+}
+
+.result-item strong {
+  text-align: right;
+}
+
+.assistant-note {
+  margin-bottom: 0;
+  margin-top: 18px;
+  padding: 12px;
+  background: #fff7ed;
+  border-radius: 10px;
+  color: #9a3412;
+  font-size: 14px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .field-assistant-page {
+    padding: 16px;
+  }
+
+  .field-assistant-header h1 {
+    font-size: 23px;
+  }
+
+  .field-assistant-card {
+    padding: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .field-assistant-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .field-assistant-header h1 {
+    font-size: 21px;
+  }
+
+  .field-asset {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .result-item {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .result-item strong {
+    text-align: left;
+  }
+
+  .analyze-btn {
+    width: 100%;
+  }
+}
+
+.voice-input-btn,
+.text-to-voice-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 12px;
+  margin-right: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 🎙️ Voice → Text */
+.voice-input-btn {
+  background: #2563eb;
+  color: white;
+}
+
+/* 🔊 Text → Voice */
+.text-to-voice-btn {
+  background: #16a34a;
+  color: white;
+}
+
+.voice-input-btn:hover,
+.text-to-voice-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
