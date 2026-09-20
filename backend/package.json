@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@cedar-policy/cedar-authorization": "^0.2.0",
+    "@strands-agents/sdk": "^1.18.0"
+  }
+}
