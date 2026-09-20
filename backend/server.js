@@ -1,11 +1,12 @@
 const http = require("http");
+const { authorizeRequestReview } = require("./cedarAuth");
 
 const PORT = 4000;
 const observations = [];
 const photos = [];
 const evidencePackages = [];
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async(req, res) => {
     console.log("REQUEST:", req.method, req.url);
   // CORS
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
@@ -472,7 +473,22 @@ if (
     return;
   }
 
-  packageData.status = "Review Requested";
+            const authorization = await authorizeRequestReview(packageId);
+
+if (authorization.type !== "allow") {
+  res.writeHead(403, {
+    "Content-Type": "application/json"
+  });
+
+  res.end(JSON.stringify({
+    success: false,
+    message: "Request Review not authorized by Cedar"
+  }));
+
+  return;
+}
+
+packageData.status = "Review Requested";
 
   res.writeHead(200, {
     "Content-Type": "application/json"
